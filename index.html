@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<title>Temperature Converter Website</title>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <div class="card">
+
+        <h1>Temperature Converter</h1>
+        <p class="para1">
+            <label>Celsius</label>
+            <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)"
+                onchange="temperatureConverter(this.value)">
+        </p>
+
+        <p class="para2">
+            <label>
+                Farhenheit:<input type="radio" name="cel" checked value="fahrenheit" class="far">
+            </label>
+            <label>
+                Kelvin:<input type="radio" name="cel" value="kelvin" class="kel">
+            </label>
+        </p>
+
+        <button onclick="temperatureConverter(document.getElementById('inputCelsius').value)">Convert</button>
+        <p id="conversionResult"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
